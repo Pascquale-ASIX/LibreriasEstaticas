@@ -1,25 +1,22 @@
 // MathClient.cpp
 // compile with: cl /EHsc MathClient.cpp /link MathLibrary.lib
 
-#include <iostream>
 #include "MathLibrary.h"
+#include <iostream>
 
-int main()
-{
-    double a = 7.4;
-    int b = 99;
+using namespace std;
 
-    std::cout << "a + b = " <<
-        MathLibrary::Arithmetic::Add(a, b) << std::endl;
-    std::cout << "a - b = " <<
-        MathLibrary::Arithmetic::Subtract(a, b) << std::endl;
-    std::cout << "a * b = " <<
-        MathLibrary::Arithmetic::Multiply(a, b) << std::endl;
-    std::cout << "a / b = " <<
-        MathLibrary::Arithmetic::Divide(a, b) << std::endl;
-
+int main() {
+    string ingrediente;
+    cout << "Ingredientes disponibles: pollo, pasta, arroz\n";
+    cout << "Introduce un ingrediente que tienes: ";
+    cin >> ingrediente;
+    cout << sugerirReceta(ingrediente) << endl;
     return 0;
 }
+
+
+
 
 // Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
 // Depurar programa: F5 o menú Depurar > Iniciar depuración
